@@ -86,6 +86,15 @@ const fruit = [
 function search(str) {
   let results = [];
 
+  const searchTerm = str.toLowerCase(); 
+
+  for(let i = 0; i < fruit.length; i++) {
+    const lowercaseFruit = fruit[i].toLowerCase();
+
+    if(lowercaseFruit.includes(searchTerm)) {
+        results.push(fruit[i]);
+    }
+  }
   // TODO
 
   return results;
@@ -103,11 +112,29 @@ function searchHandler(e) {
 }
 
 function showSuggestions(results, inputVal) {
+    const dropdownHTML = results
+    .map((result => `<li class="suggestion">${result}</li>`))
+    .join('');
+    suggestions.innerHTML = dropdownHTML;
+    const suggestionItems = suggestions.querySelectorAll('.suggestions');
+
+    suggestionItems.forEach((item) => {
+        item.addEventListener('mouseover', () => {
+            item.classList.add('highlighted');
+        });
+
+        item.addEventListener('mouseout', () => {
+            item.classList.remove('highlighted');
+        });
+    });
   // TODO
   
 }
 
 function useSuggestion(e) {
+    const selectedSuggestion = e.target.textContent;
+    input.value = selectedSuggestion;
+    suggestions.innerHTML = '';
   // TODO
 }
 

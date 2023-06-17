@@ -1,50 +1,85 @@
 * {
-    /* box-sizing: border-box; */
-    box-sizing: 20px;
-    border-box: 1px solid black;
-  }
-  
-  :focus {
-    /* TODO */
-  }
-  
-  body {
-    /* TODO */
-    background: linear-gradient()
-  }
-  
-  input {
-    /* TODO */
-  }
-  
-  .search-container {
-    /* TODO */
-  }
-  .search-container input,
-  .search-container .suggestions {
-    /* TODO */
-  }
-  .search-container input {
-    /* TODO */
-  }
-  .search-container .suggestions {
-    /* TODO */
-  }
-  
-  ul {
-    /* TODO */
-  }
-  ul.has-suggestions {
-    /* TODO */
-  }
-  ul li {
-    /* TODO */
-  }
-  ul li:hover {
-    /* TODO */
-  }
-  
-  input {
-    /* TODO */
-  }
-  
+  /* box-sizing: border-box; */
+  box-sizing: 20px;
+  border-box: 1px solid black;
+}
+
+:focus {
+  /* TODO */
+  outline: none;
+}
+
+body {
+  /* TODO */
+  background: linear-gradient(to right, #f8b500, #f16529);
+  font: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+input {
+  /* TODO */
+  border: none;
+  border-radius: 10px;
+}
+
+.search-container {
+  /* TODO */
+  width: 400px;
+  position: relative;
+  margin: 15px auto;
+}
+.search-container input,
+.search-container .suggestions {
+  /* TODO */
+  width: 100%;
+  background: #f16529;
+  text-align: left;
+}
+.search-container input {
+  /* TODO */
+  background: rgba(255, 255, 255, 0.2);
+  height: 60px;
+  padding: 0 10px;
+}
+.search-container .suggestions {
+  /* TODO */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+ul {
+  /* TODO */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  max-height: 200px;
+  overflow-y: auto;
+}
+ul.has-suggestions {
+  /* TODO */
+  display: block;
+}
+ul li {
+  /* TODO */
+  padding: 10px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+}
+ul li:hover {
+  /* TODO */
+  background-color: #f8b500;
+}
+
+input {
+  /* TODO */
+  border-bottom: 2px solid #f16529;
+}
+
